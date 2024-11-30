@@ -7,9 +7,13 @@ namespace Kindred.CurrencyExchangeService.Application
     [ExcludeFromCodeCoverage]
     public class ExchangeRateServiceCommand : IRequest<CurrencyExchangeResponse>
     {
+        public ExchangeRateServiceCommand()
+        {
+            CorrelationId = Guid.NewGuid();
+        }
         public decimal Amount { get; set; }
         public string InputCurrency { get; set; } = string.Empty;
         public string OutputCurrency { get; set; } = string.Empty;
-        public Guid CorrelationId { get; set; } = Guid.NewGuid();
+        public Guid CorrelationId { get; init; }
     }
 }
