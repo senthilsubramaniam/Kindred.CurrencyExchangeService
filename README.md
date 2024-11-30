@@ -36,11 +36,3 @@ This API provides exchange rate services to convert currencies.
 - 2.Run the Project
 - 3.Run the Curl script to get the Output.
 
-## ⚠️ Important
-
-- Exchange rates are stubbed to not hit the Exchange rate Live.
-  - To get the Live rates 
-    - Un Comment
-        - // var content = await GetLiveExchangeRate(correlationId, cancellationToken); // To get live Exchange rates
-    - and Comment
-        - var content = GetStubData(); // Used Stub for Testing.

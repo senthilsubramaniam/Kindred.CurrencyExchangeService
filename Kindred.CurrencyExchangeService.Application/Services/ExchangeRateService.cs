@@ -31,9 +31,9 @@ namespace Kindred.CurrencyExchangeService.Application.Services
                 return cachedExchangeRate;
             }
 
-            // var content = await GetLiveExchangeRate(correlationId, cancellationToken); // To get live Exchange rates
+            var content = await GetLiveExchangeRate(correlationId, cancellationToken); // To get live Exchange rates
 
-            var content = GetStubData(); // Used Stub for Testing.
+            // var content = GetStubData(); // Used Stub for Testing.
 
             var exchangeData = JsonSerializer.Deserialize<ExchangeRateResponse>(content, new JsonSerializerOptions
             {
